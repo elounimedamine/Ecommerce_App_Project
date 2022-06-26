@@ -24,6 +24,7 @@ class Language extends GetView<LocalController> {
                   textbutton: "Ar",
                   onPressed: () {
                     controller.changeLang("ar");
+                    Get.toNamed(AppRoute.onBoarding); //pour revenir à la page pour modifier la langue
                   }),
               CustomButtonLang(
                   textbutton: "Fr",

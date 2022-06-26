@@ -3,6 +3,8 @@ import 'package:ecommerce_app_project/core/localization/translation.dart';
 import 'package:ecommerce_app_project/core/services/services.dart';
 import 'package:ecommerce_app_project/routes.dart';
 import 'package:ecommerce_app_project/view/screen/language.dart';
+//import 'package:ecommerce_app_project/view/screen/language.dart';
+//import 'package:ecommerce_app_project/view/screen/onboarding.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -35,14 +37,22 @@ class MyApp extends StatelessWidget {
                 fontWeight: FontWeight.bold,
                 fontSize: 22,
                 color: AppColor.black),
+            headline2: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 26,
+                color: AppColor.black),
             bodyText1: TextStyle(
                 height: 2,
                 color: AppColor.grey,
                 fontWeight: FontWeight.bold,
-                fontSize: 15)),
+                fontSize: 15),
+            bodyText2: TextStyle(
+                height: 2,
+                color: AppColor.grey,
+                fontSize: 14)),
         primarySwatch: Colors.blue,
       ),
-      home: const Language(), //OnBoarding(),
+      home: const Language(),//Test(),//Login(), //Test(), //OnBoarding(), //Language(),
       routes: routes,
     );
   }

@@ -10,8 +10,7 @@ class LocalController extends GetxController {
 
   changeLang(String langcode) {
     Locale locale = Locale(langcode);
-    myServices.sharedPreferences.setString(
-        "lang", langcode); //pour sauvegarder l'état du langue choisis
+    myServices.sharedPreferences.setString("lang", langcode); //pour sauvegarder l'état du langue choisis
     Get.updateLocale(locale);
   }
 
