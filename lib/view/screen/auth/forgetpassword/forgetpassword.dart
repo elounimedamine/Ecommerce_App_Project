@@ -29,12 +29,12 @@ class ForgetPassword extends StatelessWidget {
         padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 30),
         child: ListView(children: [
           const SizedBox(height: 20),
-            CustmTextTitleAuth(text: "27".tr),
+            CustmTextTitleAuth(text: '27'.tr),
           const SizedBox(height: 10),
             CustomTextBodyAuth(
             // please Enter Your Email Address To Recive A verification code
               text:
-                  "29".tr),
+                  '29'.tr),
           const SizedBox(height: 15),
           CustomTextFormAuth(
             mycontroller: controller.email,
@@ -43,7 +43,7 @@ class ForgetPassword extends StatelessWidget {
             labeltext: "18".tr,
             // mycontroller: ,
           ),
-          CustomButtonAuth(text: "30".tr, onPressed: () {
+          CustomButtonAuth(text: '30'.tr, onPressed: () {
             controller.goToVerifyCode(); 
           }),
           const SizedBox(height: 40),
