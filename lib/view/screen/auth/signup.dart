@@ -1,5 +1,6 @@
 import 'package:ecommerce_app_project_flutter/controller/auth/signup_controller.dart';
 import 'package:ecommerce_app_project_flutter/core/constant/color.dart';
+import 'package:ecommerce_app_project_flutter/core/functions/validinput.dart';
 import 'package:ecommerce_app_project_flutter/view/widget/auth/custombuttonauth.dart';
 import 'package:ecommerce_app_project_flutter/view/widget/auth/customtextbodyauth.dart';
 import 'package:ecommerce_app_project_flutter/view/widget/auth/customtextformauth.dart';
@@ -27,54 +28,69 @@ class SignUp extends StatelessWidget {
       ),
       body: Container(
         padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 30),
-        child: ListView(children: [
-          const SizedBox(height: 20),
-          CustmTextTitleAuth(text: "10".tr),
-          const SizedBox(height: 10),
-          CustomTextBodyAuth(text: "24".tr),
-          const SizedBox(height: 15),
-          CustomTextFormAuth(
-            mycontroller: controller.username,
-            hinttext: "23".tr,
-            iconData: Icons.person_outline,
-            labeltext: "20".tr,
-            // mycontroller: ,
-          ),
-          CustomTextFormAuth(
-            mycontroller: controller.email,
-            hinttext: "12".tr,
-            iconData: Icons.email_outlined,
-            labeltext: "18".tr,
-            // mycontroller: ,
-          ),
-          CustomTextFormAuth(
-            mycontroller: controller.phone,
-            hinttext: "22".tr,
-            iconData: Icons.phone_android_outlined,
-            labeltext: "21".tr,
-            // mycontroller: ,
-          ),
-          CustomTextFormAuth(
-            mycontroller: controller.password,
-            hinttext: "13".tr,
-            iconData: Icons.lock_outline,
-            labeltext: "19".tr,
-            // mycontroller: ,
-          ),
-          CustomButtonAuth(
-              text: "17".tr,
-              onPressed: () {
-                controller.signUp();
-              }),
-          const SizedBox(height: 40),
-          CustomTextSignUpOrSignIn(
-            textone: "25".tr,
-            texttwo: "26".tr,
-            onTap: () {
-              controller.goToSignIn();
-            },
-          ),
-        ]),
+        child: Form(
+          key: controller.formstate,
+          child: ListView(children: [
+            const SizedBox(height: 20),
+            CustmTextTitleAuth(text: "10".tr),
+            const SizedBox(height: 10),
+            CustomTextBodyAuth(text: "24".tr),
+            const SizedBox(height: 15),
+            CustomTextFormAuth(
+              mycontroller: controller.username,
+              hinttext: "23".tr,
+              iconData: Icons.person_outline,
+              labeltext: "20".tr,
+              valid: (val) { 
+                return validInupt(val!, 6, 12, "username");
+              },
+              // mycontroller: ,
+            ),
+            CustomTextFormAuth(
+              mycontroller: controller.email,
+              hinttext: "12".tr,
+              iconData: Icons.email_outlined,
+              labeltext: "18".tr,
+              valid: (val) { 
+                return validInupt(val!, 5, 25, "email");
+              },
+              // mycontroller: ,
+            ),
+            CustomTextFormAuth(
+              mycontroller: controller.phone,
+              hinttext: "22".tr,
+              iconData: Icons.phone_android_outlined,
+              labeltext: "21".tr,
+              valid: (val) { 
+                return validInupt(val!, 5, 8, "phone");
+              },
+              // mycontroller: ,
+            ),
+            CustomTextFormAuth(
+              mycontroller: controller.password,
+              hinttext: "13".tr,
+              iconData: Icons.lock_outline,
+              labeltext: "19".tr, 
+              valid: (val) { 
+                return validInupt(val!, 5, 10, "password");
+              },
+              // mycontroller: ,
+            ),
+            CustomButtonAuth(
+                text: "17".tr,
+                onPressed: () {
+                  controller.signUp();
+                }),
+            const SizedBox(height: 40),
+            CustomTextSignUpOrSignIn(
+              textone: "25".tr,
+              texttwo: "26".tr,
+              onTap: () {
+                controller.goToSignIn();
+              },
+            ),
+          ]),
+        ),
       ),
     );
   }

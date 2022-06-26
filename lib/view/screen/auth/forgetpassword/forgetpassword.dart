@@ -1,5 +1,6 @@
 import 'package:ecommerce_app_project_flutter/controller/auth/forgetpassword_controller.dart';
 import 'package:ecommerce_app_project_flutter/core/constant/color.dart';
+import 'package:ecommerce_app_project_flutter/core/functions/validinput.dart';
 import 'package:ecommerce_app_project_flutter/view/widget/auth/custombuttonauth.dart';
 import 'package:ecommerce_app_project_flutter/view/widget/auth/customtextbodyauth.dart';
 import 'package:ecommerce_app_project_flutter/view/widget/auth/customtextformauth.dart';
@@ -27,27 +28,33 @@ class ForgetPassword extends StatelessWidget {
       ),
       body: Container(
         padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 30),
-        child: ListView(children: [
-          const SizedBox(height: 20),
-            CustmTextTitleAuth(text: '27'.tr),
-          const SizedBox(height: 10),
-            CustomTextBodyAuth(
-            // please Enter Your Email Address To Recive A verification code
-              text:
-                  '29'.tr),
-          const SizedBox(height: 15),
-          CustomTextFormAuth(
-            mycontroller: controller.email,
-            hinttext: "12".tr,
-            iconData: Icons.email_outlined,
-            labeltext: "18".tr,
-            // mycontroller: ,
-          ),
-          CustomButtonAuth(text: '30'.tr, onPressed: () {
-            controller.goToVerifyCode(); 
-          }),
-          const SizedBox(height: 40),
-        ]),
+        child: Form(
+          key: controller.formstate,
+          child: ListView(children: [
+            const SizedBox(height: 20),
+              CustmTextTitleAuth(text: '27'.tr),
+            const SizedBox(height: 10),
+              CustomTextBodyAuth(
+              // please Enter Your Email Address To Recive A verification code
+                text:
+                    '29'.tr),
+            const SizedBox(height: 15),
+            CustomTextFormAuth(
+              mycontroller: controller.email,
+              hinttext: "12".tr,
+              iconData: Icons.email_outlined,
+              labeltext: "18".tr,
+              valid: (val) { 
+                return validInupt(val!, 5, 25, "email");
+              },
+              // mycontroller: ,
+            ),
+            CustomButtonAuth(text: '30'.tr, onPressed: () {
+              controller.goToVerifyCode(); 
+            }),
+            const SizedBox(height: 40),
+          ]),
+        ),
       ),
     );
   }
