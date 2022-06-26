@@ -47,6 +47,7 @@ class MyTranslation extends Translations {
           "39": "رمز التحقق",
           "40": "تحقق من الرمز",
           "41": "الرجاء إدخال الرمز الرقمي المرسل إلى admin@gmail.com",
+          "42": "إعادة تعيين كلمة المرور",
         },
         "en": {
           "1": "Choose Language",
@@ -94,6 +95,7 @@ class MyTranslation extends Translations {
           "39": "Verification Code",
           "40": "Check Code",
           "41": "Please Enter The Digit Code Sent To admin@gmail.com",
+          "42": "ResetPassword",
         }
       };
 }

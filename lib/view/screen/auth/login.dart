@@ -21,7 +21,7 @@ class Login extends StatelessWidget {
         centerTitle: true,
         backgroundColor: AppColor.backgroundcolor,
         elevation: 0.0,
-        title: Text('Sign In',
+        title: Text("9".tr,
             style: Theme.of(context)
                 .textTheme
                 .headline1!

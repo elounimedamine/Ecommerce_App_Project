@@ -20,7 +20,7 @@ class ResetPassword extends StatelessWidget {
         centerTitle: true,
         backgroundColor: AppColor.backgroundcolor,
         elevation: 0.0,
-        title: Text('ResetPassword',
+        title: Text("42".tr,
             style: Theme.of(context)
                 .textTheme
                 .headline1!
