@@ -1,20 +1,20 @@
 import 'package:ecommerce_app_project_flutter/core/constant/routes.dart';
 import 'package:get/get.dart';
 
-abstract class VerifyCodeController extends GetxController {
+abstract class VerifyCodeSignUpController extends GetxController {
   checkCode();
-  goToResetPassword();
+  goToSuccesSignUp();
 }
 
-class VerifyCodeControllerImp extends VerifyCodeController {
+class VerifyCodeSignUpControllerImp extends VerifyCodeSignUpController {
   late String verifycode;
 
   @override
   checkCode() {}
 
   @override
-  goToResetPassword() {
-    Get.offNamed(AppRoute.resetPassword); //الغاء العودة
+  goToSuccesSignUp() {
+    Get.offNamed(AppRoute.successSignUp); //الغاء العودة
   }
 
   @override

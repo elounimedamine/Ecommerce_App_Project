@@ -1,14 +1,12 @@
-import 'package:ecommerce_app_project/core/localization/changelocal.dart';
-import 'package:ecommerce_app_project/core/localization/translation.dart';
-import 'package:ecommerce_app_project/core/services/services.dart';
-import 'package:ecommerce_app_project/routes.dart';
-import 'package:ecommerce_app_project/view/screen/language.dart';
+import 'package:ecommerce_app_project_flutter/core/localization/changelocal.dart';
+import 'package:ecommerce_app_project_flutter/core/localization/translation.dart';
+import 'package:ecommerce_app_project_flutter/core/services/services.dart';
+import 'package:ecommerce_app_project_flutter/routes.dart';
+import 'package:ecommerce_app_project_flutter/view/screen/language.dart';
 //import 'package:ecommerce_app_project/view/screen/language.dart';
 //import 'package:ecommerce_app_project/view/screen/onboarding.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
-import 'core/constant/color.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -24,34 +22,13 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    LocalController controller = Get.put(LocalController());
+    LocaleController controller = Get.put(LocaleController());
     return GetMaterialApp(
       translations: MyTranslation(),
       debugShowCheckedModeBanner: false,
       title: 'E-commerce Application',
       locale: controller.language,
-      theme: ThemeData(
-        fontFamily: "PlayfairDisplay",
-        textTheme: const TextTheme(
-            headline1: TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 22,
-                color: AppColor.black),
-            headline2: TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 26,
-                color: AppColor.black),
-            bodyText1: TextStyle(
-                height: 2,
-                color: AppColor.grey,
-                fontWeight: FontWeight.bold,
-                fontSize: 15),
-            bodyText2: TextStyle(
-                height: 2,
-                color: AppColor.grey,
-                fontSize: 14)),
-        primarySwatch: Colors.blue,
-      ),
+      theme: controller.appTheme,
       home: const Language(),//Test(),//Login(), //Test(), //OnBoarding(), //Language(),
       routes: routes,
     );

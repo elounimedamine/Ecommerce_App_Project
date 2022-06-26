@@ -1,6 +1,6 @@
-import 'package:ecommerce_app_project/controller/onboarding_controller.dart';
-import 'package:ecommerce_app_project/core/constant/color.dart';
-import 'package:ecommerce_app_project/data/datasource/static/static.dart';
+import 'package:ecommerce_app_project_flutter/controller/onboarding_controller.dart';
+import 'package:ecommerce_app_project_flutter/core/constant/color.dart';
+import 'package:ecommerce_app_project_flutter/data/datasource/static/static.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

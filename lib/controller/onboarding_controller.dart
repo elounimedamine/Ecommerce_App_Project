@@ -1,5 +1,5 @@
-import 'package:ecommerce_app_project/core/constant/routes.dart';
-import 'package:ecommerce_app_project/data/datasource/static/static.dart';
+import 'package:ecommerce_app_project_flutter/core/constant/routes.dart';
+import 'package:ecommerce_app_project_flutter/data/datasource/static/static.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 

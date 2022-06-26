@@ -1,11 +1,11 @@
-import 'package:ecommerce_app_project/controller/auth/login_controller.dart';
-import 'package:ecommerce_app_project/core/constant/color.dart';
-import 'package:ecommerce_app_project/view/widget/auth/custombuttonauth.dart';
-import 'package:ecommerce_app_project/view/widget/auth/customtextbodyauth.dart';
-import 'package:ecommerce_app_project/view/widget/auth/customtextformauth.dart';
-import 'package:ecommerce_app_project/view/widget/auth/customtexttitleauth.dart';
-import 'package:ecommerce_app_project/view/widget/auth/logoauth.dart';
-import 'package:ecommerce_app_project/view/widget/auth/textsignup.dart';
+import 'package:ecommerce_app_project_flutter/controller/auth/login_controller.dart';
+import 'package:ecommerce_app_project_flutter/core/constant/color.dart';
+import 'package:ecommerce_app_project_flutter/view/widget/auth/custombuttonauth.dart';
+import 'package:ecommerce_app_project_flutter/view/widget/auth/customtextbodyauth.dart';
+import 'package:ecommerce_app_project_flutter/view/widget/auth/customtextformauth.dart';
+import 'package:ecommerce_app_project_flutter/view/widget/auth/customtexttitleauth.dart';
+import 'package:ecommerce_app_project_flutter/view/widget/auth/logoauth.dart';
+import 'package:ecommerce_app_project_flutter/view/widget/auth/textsignup.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -27,44 +27,44 @@ class Login extends StatelessWidget {
                 .copyWith(color: AppColor.grey)),
       ),
       body: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 15),
+        padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 30),
         child: ListView(children: [
           const LogoAuth(),
           const SizedBox(height: 20),
-          const CustmTextTitleAuth(text: "Welcome Back"),
+            CustmTextTitleAuth(text: "10".tr),
           const SizedBox(height: 10),
-          const CustomTextBodyAuth(
+            CustomTextBodyAuth(
               text:
-                  "Sign In with your Email and Password \n OR Continue With Social Media"),
-          const SizedBox(height: 25),
+                  "11".tr),
+          const SizedBox(height: 15),
           CustomTextFormAuth(
             mycontroller: controller.email,
-            hinttext: "Enter Your Email",
+            hinttext: "12".tr,
             iconData: Icons.email_outlined,
-            labeltext: "Email",
-            //mycontroller: null,
+            labeltext: "18".tr,
+            // mycontroller: ,
           ),
           CustomTextFormAuth(
             mycontroller: controller.password,
-            hinttext: "Enter Your Password",
+            hinttext: "13".tr,
             iconData: Icons.lock_outline,
-            labeltext: "Password",
-            //mycontroller: null,
+            labeltext: "19".tr,
+            // mycontroller: ,
           ),
           InkWell(
-              onTap: () {
-                controller.goToForgetPassword();
-              },
-              child: const Text("Forget Password", textAlign: TextAlign.end)),
-          const SizedBox(height: 10),
-          CustomButtonAuth(
-              text: "Sign In",
-              style: const TextStyle(fontWeight: FontWeight.bold),
-              onPressed: () {}),
-          const SizedBox(height: 20),
+            onTap: () {
+              controller.goToForgetPassword();
+            },
+            child:   Text(
+              "14".tr,
+              textAlign: TextAlign.right,
+            ),
+          ),
+          CustomButtonAuth(text: "15".tr, onPressed: () {}),
+          const SizedBox(height: 40),
           CustomTextSignUpOrSignIn(
-            textone: " Don't have an account ? ",
-            texttwo: " Sign Up ",
+            textone: "16".tr,
+            texttwo: "17".tr,
             onTap: () {
               controller.goToSignUp();
             },

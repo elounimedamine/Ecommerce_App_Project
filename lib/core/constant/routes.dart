@@ -8,4 +8,6 @@ class AppRoute {
   static const String successSignUp = "/successsignup";
   static const String successResetPassword = "/successresetpassword";
   static const String checkemail = "/checkemail";
+  // ignore: constant_identifier_names
+  static const String VerfiyCodeSignUp = "/verfiycodesignup";
 }

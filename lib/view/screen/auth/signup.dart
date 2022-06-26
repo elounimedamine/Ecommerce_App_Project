@@ -1,10 +1,10 @@
-import 'package:ecommerce_app_project/controller/auth/signup_controller.dart';
-import 'package:ecommerce_app_project/core/constant/color.dart';
-import 'package:ecommerce_app_project/view/widget/auth/custombuttonauth.dart';
-import 'package:ecommerce_app_project/view/widget/auth/customtextbodyauth.dart';
-import 'package:ecommerce_app_project/view/widget/auth/customtextformauth.dart';
-import 'package:ecommerce_app_project/view/widget/auth/customtexttitleauth.dart';
-import 'package:ecommerce_app_project/view/widget/auth/textsignup.dart';
+import 'package:ecommerce_app_project_flutter/controller/auth/signup_controller.dart';
+import 'package:ecommerce_app_project_flutter/core/constant/color.dart';
+import 'package:ecommerce_app_project_flutter/view/widget/auth/custombuttonauth.dart';
+import 'package:ecommerce_app_project_flutter/view/widget/auth/customtextbodyauth.dart';
+import 'package:ecommerce_app_project_flutter/view/widget/auth/customtextformauth.dart';
+import 'package:ecommerce_app_project_flutter/view/widget/auth/customtexttitleauth.dart';
+import 'package:ecommerce_app_project_flutter/view/widget/auth/textsignup.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -19,58 +19,57 @@ class SignUp extends StatelessWidget {
         centerTitle: true,
         backgroundColor: AppColor.backgroundcolor,
         elevation: 0.0,
-        title: Text('Sign Up',
+        title: Text('17'.tr,
             style: Theme.of(context)
                 .textTheme
                 .headline1!
                 .copyWith(color: AppColor.grey)),
       ),
       body: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 15),
+        padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 30),
         child: ListView(children: [
-          const CustmTextTitleAuth(text: "Welcome Back"),
+          const SizedBox(height: 20),
+          CustmTextTitleAuth(text: "10".tr),
           const SizedBox(height: 10),
-          const CustomTextBodyAuth(
-              text:
-                  "Sign Up with your Email and Password \n OR Continue With Social Media"),
-          const SizedBox(height: 25),
+          CustomTextBodyAuth(text: "24".tr),
+          const SizedBox(height: 15),
           CustomTextFormAuth(
             mycontroller: controller.username,
-            hinttext: "Enter Your Username",
+            hinttext: "23".tr,
             iconData: Icons.person_outline,
-            labeltext: "Username",
-            //mycontroller: null,
+            labeltext: "20".tr,
+            // mycontroller: ,
           ),
           CustomTextFormAuth(
             mycontroller: controller.email,
-            hinttext: "Enter Your Email",
+            hinttext: "12".tr,
             iconData: Icons.email_outlined,
-            labeltext: "Email",
-            //mycontroller: null,
+            labeltext: "18".tr,
+            // mycontroller: ,
           ),
           CustomTextFormAuth(
             mycontroller: controller.phone,
-            hinttext: "Enter Your Phone",
+            hinttext: "22".tr,
             iconData: Icons.phone_android_outlined,
-            labeltext: "Phone",
-            //mycontroller: null,
+            labeltext: "21".tr,
+            // mycontroller: ,
           ),
           CustomTextFormAuth(
             mycontroller: controller.password,
-            hinttext: "Enter Your Password",
+            hinttext: "13".tr,
             iconData: Icons.lock_outline,
-            labeltext: "Password",
-            //mycontroller: null,
+            labeltext: "19".tr,
+            // mycontroller: ,
           ),
           CustomButtonAuth(
-              text: "Sign Up",
+              text: "17".tr,
               onPressed: () {
                 controller.signUp();
               }),
-          const SizedBox(height: 20),
+          const SizedBox(height: 40),
           CustomTextSignUpOrSignIn(
-            textone: " Have an account ? ",
-            texttwo: " Sign In ",
+            textone: "25".tr,
+            texttwo: "26".tr,
             onTap: () {
               controller.goToSignIn();
             },

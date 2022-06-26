@@ -1,16 +1,21 @@
-import 'dart:ui';
-
-import 'package:ecommerce_app_project/core/services/services.dart';
+import 'package:ecommerce_app_project_flutter/core/constant/apptheme.dart';
+import 'package:ecommerce_app_project_flutter/core/services/services.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class LocalController extends GetxController {
+class LocaleController extends GetxController {
+  
   Locale? language;
 
   MyServices myServices = Get.find();
 
+  ThemeData appTheme = themeEnglish;
+
   changeLang(String langcode) {
     Locale locale = Locale(langcode);
-    myServices.sharedPreferences.setString("lang", langcode); //pour sauvegarder l'état du langue choisis
+    myServices.sharedPreferences.setString("lang", langcode);
+    appTheme = langcode == "ar" ? themeArabic : themeEnglish;
+    Get.changeTheme(appTheme);
     Get.updateLocale(locale);
   }
 
@@ -19,12 +24,13 @@ class LocalController extends GetxController {
     String? sharedPrefLang = myServices.sharedPreferences.getString("lang");
     if (sharedPrefLang == "ar") {
       language = const Locale("ar");
-    } else if (sharedPrefLang == "fr") {
-      language = const Locale("fr");
+      appTheme = themeArabic;
     } else if (sharedPrefLang == "en") {
       language = const Locale("en");
+      appTheme = themeEnglish;
     } else {
-      language = Locale(Get.deviceLocale!.languageCode); //lang par défaut
+      language = Locale(Get.deviceLocale!.languageCode);
+      appTheme = themeEnglish;
     }
     super.onInit();
   }

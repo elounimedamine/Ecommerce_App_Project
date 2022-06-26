@@ -1,10 +1,10 @@
-import 'package:ecommerce_app_project/core/constant/routes.dart';
+import 'package:ecommerce_app_project_flutter/core/constant/routes.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 
 abstract class CheckEmailController extends GetxController {
   checkemail();
-  goToSuccesSignUp();
+  goToVerifyCode();
 }
 
 class CheckEmailControllerImp extends CheckEmailController {
@@ -14,8 +14,8 @@ class CheckEmailControllerImp extends CheckEmailController {
   checkemail() {}
 
   @override
-  goToSuccesSignUp() {
-    Get.offNamed(AppRoute.successSignUp); //الغاء العودة
+  goToVerifyCode() {
+    Get.offNamed(AppRoute.VerfiyCodeSignUp); //الغاء العودة
   }
 
   @override

@@ -1,8 +1,8 @@
-import 'package:ecommerce_app_project/controller/auth/resetpassword_controller.dart';
-import 'package:ecommerce_app_project/core/constant/color.dart';
-import 'package:ecommerce_app_project/view/widget/auth/custombuttonauth.dart';
-import 'package:ecommerce_app_project/view/widget/auth/customtextbodyauth.dart';
-import 'package:ecommerce_app_project/view/widget/auth/customtexttitleauth.dart';
+import 'package:ecommerce_app_project_flutter/controller/auth/resetpassword_controller.dart';
+import 'package:ecommerce_app_project_flutter/core/constant/color.dart';
+import 'package:ecommerce_app_project_flutter/view/widget/auth/custombuttonauth.dart';
+import 'package:ecommerce_app_project_flutter/view/widget/auth/customtextbodyauth.dart';
+import 'package:ecommerce_app_project_flutter/view/widget/auth/customtexttitleauth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../../widget/auth/customtextformauth.dart';
@@ -19,39 +19,40 @@ class ResetPassword extends StatelessWidget {
         centerTitle: true,
         backgroundColor: AppColor.backgroundcolor,
         elevation: 0.0,
-        title: Text('Reset Password',
+        title: Text('ResetPassword',
             style: Theme.of(context)
                 .textTheme
                 .headline1!
                 .copyWith(color: AppColor.grey)),
       ),
       body: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 15),
+        padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 30),
         child: ListView(children: [
-          const CustmTextTitleAuth(text: "New Password"),
+          const SizedBox(height: 20),
+          CustmTextTitleAuth(text: "35".tr),
           const SizedBox(height: 10),
-          const CustomTextBodyAuth(text: "Please Enter New Password"),
-          const SizedBox(height: 25),
+          CustomTextBodyAuth(text: "35".tr),
+          const SizedBox(height: 15),
           CustomTextFormAuth(
             mycontroller: controller.password,
-            hinttext: "Enter Your Password",
+            hinttext: "13".tr,
             iconData: Icons.lock_outline,
-            labeltext: "Password",
-            //mycontroller: null,
+            labeltext: "19".tr,
+            // mycontroller: ,
           ),
           CustomTextFormAuth(
             mycontroller: controller.password,
-            hinttext: "Re Enter Your Password",
+            hinttext: "Re" + " " + "13".tr,
             iconData: Icons.lock_outline,
-            labeltext: "Password",
-            //mycontroller: null,
+            labeltext: "19".tr,
+            // mycontroller: ,
           ),
           CustomButtonAuth(
-              text: "Save",
+              text: "33".tr,
               onPressed: () {
                 controller.goToSuccessResetPassword();
               }),
-          const SizedBox(height: 20),
+          const SizedBox(height: 40),
         ]),
       ),
     );

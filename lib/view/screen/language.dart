@@ -1,10 +1,10 @@
-import 'package:ecommerce_app_project/core/constant/routes.dart';
-import 'package:ecommerce_app_project/core/localization/changelocal.dart';
-import 'package:ecommerce_app_project/view/widget/language/custombuttomlang.dart';
+import 'package:ecommerce_app_project_flutter/core/constant/routes.dart';
+import 'package:ecommerce_app_project_flutter/core/localization/changelocal.dart';
+import 'package:ecommerce_app_project_flutter/view/widget/language/custombuttomlang.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class Language extends GetView<LocalController> {
+class Language extends GetView<LocaleController> {
   const Language({Key? key}) : super(key: key);
 
   @override
@@ -24,12 +24,6 @@ class Language extends GetView<LocalController> {
                   textbutton: "Ar",
                   onPressed: () {
                     controller.changeLang("ar");
-                    Get.toNamed(AppRoute.onBoarding); //pour revenir à la page pour modifier la langue
-                  }),
-              CustomButtonLang(
-                  textbutton: "Fr",
-                  onPressed: () {
-                    controller.changeLang("fr");
                     Get.toNamed(AppRoute.onBoarding); //pour revenir à la page pour modifier la langue
                   }),
               CustomButtonLang(

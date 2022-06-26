@@ -1,11 +1,10 @@
-import 'package:ecommerce_app_project/controller/onboarding_controller.dart';
-import 'package:ecommerce_app_project/core/constant/color.dart';
+import 'package:ecommerce_app_project_flutter/controller/onboarding_controller.dart';
+import 'package:ecommerce_app_project_flutter/core/constant/color.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class CustomButtonOnBoarding extends GetView<OnBoardingControllerImp> {
   const CustomButtonOnBoarding({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -18,7 +17,7 @@ class CustomButtonOnBoarding extends GetView<OnBoardingControllerImp> {
             controller.next();
           },
           color: AppColor.primaryColor,
-          child: const Text("Continue")),
+          child: Text("8".tr)),
     );
   }
 }
