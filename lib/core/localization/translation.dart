@@ -43,7 +43,10 @@ class MyTranslation extends Translations {
           "35": "الكلمة الجديدة",
           "36": "تم اعادة تعيين كلمة المرور بنجاح",
           "37": "تهانينا",
-          "38": "تم التسجيل بنجاح"
+          "38": "تم التسجيل بنجاح",
+          "39": "رمز التحقق",
+          "40": "تحقق من الرمز",
+          "41": "الرجاء إدخال الرمز الرقمي المرسل إلى admin@gmail.com",
         },
         "en": {
           "1": "Choose Language",
@@ -87,7 +90,10 @@ class MyTranslation extends Translations {
           "35": "New Password",
           "36": "Password has been reset successfully",
           "37": "congratulations",
-          "38": "successfully registered"
+          "38": "successfully registered",
+          "39": "Verification Code",
+          "40": "Check Code",
+          "41": "Please Enter The Digit Code Sent To admin@gmail.com",
         }
       };
 }

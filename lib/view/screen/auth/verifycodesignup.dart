@@ -17,7 +17,7 @@ class VerfiyCodeSignUp extends StatelessWidget {
         centerTitle: true,
         backgroundColor: AppColor.backgroundcolor,
         elevation: 0.0,
-        title: Text('Verification Code',
+        title: Text("39".tr,
             style: Theme.of(context)
                 .textTheme
                 .headline1!
@@ -27,11 +27,11 @@ class VerfiyCodeSignUp extends StatelessWidget {
         padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 30),
         child: ListView(children: [
           const SizedBox(height: 20),
-          const CustmTextTitleAuth(text: "Check code"),
+          CustmTextTitleAuth(text: "40".tr),
           const SizedBox(height: 10),
-          const CustomTextBodyAuth(
-              text:
-                  "Please Enter The Digit Code Sent To admin@gmail.com"),
+          CustomTextBodyAuth(
+              text:"41".tr
+          ),
           const SizedBox(height: 15),
             OtpTextField(
               

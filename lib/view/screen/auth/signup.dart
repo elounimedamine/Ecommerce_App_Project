@@ -56,16 +56,16 @@ class SignUp extends StatelessWidget {
               },
               // mycontroller: ,
             ),
-            CustomTextFormAuth(
-              mycontroller: controller.phone,
-              hinttext: "22".tr,
-              iconData: Icons.phone_android_outlined,
-              labeltext: "21".tr,
-              valid: (val) { 
-                return validInupt(val!, 5, 8, "phone");
-              },
-              // mycontroller: ,
-            ),
+            // CustomTextFormAuth(
+            //   mycontroller: controller.phone,
+            //   hinttext: "22".tr,
+            //   iconData: Icons.phone_android_outlined,
+            //   labeltext: "21".tr,
+            //   valid: (val) { 
+            //     return validInupt(val!, 5, 8, "phone");
+            //   },
+            //   // mycontroller: ,
+            // ),
             CustomTextFormAuth(
               mycontroller: controller.password,
               hinttext: "13".tr,
