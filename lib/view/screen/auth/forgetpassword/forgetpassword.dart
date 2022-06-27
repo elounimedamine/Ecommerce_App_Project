@@ -40,6 +40,7 @@ class ForgetPassword extends StatelessWidget {
                     '29'.tr),
             const SizedBox(height: 15),
             CustomTextFormAuth(
+              isNumber: false,
               mycontroller: controller.email,
               hinttext: "12".tr,
               iconData: Icons.email_outlined,

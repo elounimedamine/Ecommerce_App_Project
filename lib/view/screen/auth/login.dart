@@ -41,6 +41,7 @@ class Login extends StatelessWidget {
                     "11".tr),
             const SizedBox(height: 15),
             CustomTextFormAuth(
+              isNumber: false,
               mycontroller: controller.email,
               hinttext: "12".tr,
               iconData: Icons.email_outlined,
@@ -51,6 +52,7 @@ class Login extends StatelessWidget {
               // mycontroller: ,
             ),
             CustomTextFormAuth(
+              isNumber: false,
               mycontroller: controller.password,
               hinttext: "13".tr,
               iconData: Icons.lock_outline,

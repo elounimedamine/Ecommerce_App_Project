@@ -14,7 +14,6 @@ class SignUp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    SignUpControllerImp controller = Get.put(SignUpControllerImp());
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
@@ -26,7 +25,7 @@ class SignUp extends StatelessWidget {
                 .headline1!
                 .copyWith(color: AppColor.grey)),
       ),
-      body: Container(
+      body: GetBuilder<SignUpControllerImp>(builder: (controller) => Container(
         padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 30),
         child: Form(
           key: controller.formstate,
@@ -37,6 +36,7 @@ class SignUp extends StatelessWidget {
             CustomTextBodyAuth(text: "24".tr),
             const SizedBox(height: 15),
             CustomTextFormAuth(
+              isNumber: false,
               mycontroller: controller.username,
               hinttext: "23".tr,
               iconData: Icons.person_outline,
@@ -47,6 +47,7 @@ class SignUp extends StatelessWidget {
               // mycontroller: ,
             ),
             CustomTextFormAuth(
+              isNumber: false,
               mycontroller: controller.email,
               hinttext: "12".tr,
               iconData: Icons.email_outlined,
@@ -56,17 +57,19 @@ class SignUp extends StatelessWidget {
               },
               // mycontroller: ,
             ),
-            // CustomTextFormAuth(
-            //   mycontroller: controller.phone,
-            //   hinttext: "22".tr,
-            //   iconData: Icons.phone_android_outlined,
-            //   labeltext: "21".tr,
-            //   valid: (val) { 
-            //     return validInupt(val!, 5, 8, "phone");
-            //   },
-            //   // mycontroller: ,
-            // ),
             CustomTextFormAuth(
+              isNumber: true,
+              mycontroller: controller.phone,
+              hinttext: "22".tr,
+              iconData: Icons.phone_android_outlined,
+              labeltext: "21".tr,
+              valid: (val) { 
+                return validInupt(val!, 7, 11, "phone");
+              },
+              // mycontroller: ,
+            ),
+            CustomTextFormAuth(
+              isNumber: false,
               mycontroller: controller.password,
               hinttext: "13".tr,
               iconData: Icons.lock_outline,
@@ -91,7 +94,7 @@ class SignUp extends StatelessWidget {
             ),
           ]),
         ),
-      ),
+      )),
     );
   }
 }
