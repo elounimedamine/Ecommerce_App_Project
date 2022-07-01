@@ -20,7 +20,7 @@ class ResetPassword extends StatelessWidget {
         centerTitle: true,
         backgroundColor: AppColor.backgroundcolor,
         elevation: 0.0,
-        title: Text("42".tr,
+        title: Text('ResetPassword',
             style: Theme.of(context)
                 .textTheme
                 .headline1!
@@ -37,25 +37,26 @@ class ResetPassword extends StatelessWidget {
             CustomTextBodyAuth(text: "35".tr),
             const SizedBox(height: 15),
             CustomTextFormAuth(
-              isNumber: false,
+              isNumber: false ,
+              valid: (val) {
+                return validInput(val!, 3, 40, "password");
+              },
               mycontroller: controller.password,
               hinttext: "13".tr,
               iconData: Icons.lock_outline,
               labeltext: "19".tr,
-              valid: (val) { 
-                return validInupt(val!, 5, 10, "password");
-              },
               // mycontroller: ,
             ),
             CustomTextFormAuth(
-              isNumber: false,
+              isNumber: false ,
+
+              valid: (val) {
+                return validInput(val!, 3, 40, "password");
+              },
               mycontroller: controller.password,
               hinttext: "Re" + " " + "13".tr,
               iconData: Icons.lock_outline,
               labeltext: "19".tr,
-              valid: (val) { 
-                return validInupt(val!, 5, 10, "password");
-              },
               // mycontroller: ,
             ),
             CustomButtonAuth(

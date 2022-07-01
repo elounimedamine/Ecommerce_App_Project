@@ -4,26 +4,21 @@ import 'package:get/get.dart';
 
 abstract class ForgetPasswordController extends GetxController {
   checkemail();
-  goToVerifyCode();
+  goToVerfiyCode();
 }
 
 class ForgetPasswordControllerImp extends ForgetPasswordController {
-
   GlobalKey<FormState> formstate = GlobalKey<FormState>();
-
   late TextEditingController email;
 
   @override
   checkemail() {}
 
   @override
-  goToVerifyCode() {
-    var formdata = formstate.currentState;
-
-    if(formdata!.validate()){
-      print("Valid");
-      Get.offNamed(AppRoute.verfiyCode); //الغاء العودة
-    }else{
+  goToVerfiyCode() {
+    if (formstate.currentState!.validate()) {
+      Get.offNamed(AppRoute.verfiyCode);
+    } else {
       print("Not Valid");
     }
   }

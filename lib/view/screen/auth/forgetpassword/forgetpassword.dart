@@ -32,27 +32,26 @@ class ForgetPassword extends StatelessWidget {
           key: controller.formstate,
           child: ListView(children: [
             const SizedBox(height: 20),
-              CustmTextTitleAuth(text: '27'.tr),
+            CustmTextTitleAuth(text: "27".tr),
             const SizedBox(height: 10),
-              CustomTextBodyAuth(
-              // please Enter Your Email Address To Recive A verification code
-                text:
-                    '29'.tr),
+            CustomTextBodyAuth(
+                // please Enter Your Email Address To Recive A verification code
+                text: "29".tr),
             const SizedBox(height: 15),
             CustomTextFormAuth(
               isNumber: false,
+              valid: (val) {},
               mycontroller: controller.email,
               hinttext: "12".tr,
               iconData: Icons.email_outlined,
               labeltext: "18".tr,
-              valid: (val) { 
-                return validInupt(val!, 5, 25, "email");
-              },
               // mycontroller: ,
             ),
-            CustomButtonAuth(text: '30'.tr, onPressed: () {
-              controller.goToVerifyCode(); 
-            }),
+            CustomButtonAuth(
+                text: "30".tr,
+                onPressed: () {
+                  controller.goToVerfiyCode();
+                }),
             const SizedBox(height: 40),
           ]),
         ),

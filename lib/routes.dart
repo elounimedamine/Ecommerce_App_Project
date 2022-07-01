@@ -11,16 +11,15 @@ import 'package:ecommerce_app_project_flutter/view/screen/onboarding.dart';
 import 'package:flutter/material.dart';
 
 Map<String, Widget Function(BuildContext)> routes = {
-  //Auth
+  // Auth
   AppRoute.login: (context) => const Login(),
   AppRoute.signUp: (context) => const SignUp(),
   AppRoute.forgetPassword: (context) => const ForgetPassword(),
   AppRoute.verfiyCode: (context) => const VerfiyCode(),
-  AppRoute.resetPassword: (context) => const ResetPassword(),
+  AppRoute.resetPassword: (context) => const ResetPassword(), 
   AppRoute.successResetPassword: (context) => const SuccessResetPassword(),
   AppRoute.successSignUp: (context) => const SuccessSignUp(),
+  // OnBoarding
+  AppRoute.onBoarding: (context) => const OnBoarding(),
   AppRoute.VerfiyCodeSignUp: (context) => const VerfiyCodeSignUp(),
-
-  //OnBoarding
-  AppRoute.onBoarding: (context) => const OnBoarding(), 
 };

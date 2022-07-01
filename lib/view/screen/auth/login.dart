@@ -21,7 +21,7 @@ class Login extends StatelessWidget {
         centerTitle: true,
         backgroundColor: AppColor.backgroundcolor,
         elevation: 0.0,
-        title: Text("9".tr,
+        title: Text('Sign In',
             style: Theme.of(context)
                 .textTheme
                 .headline1!
@@ -34,46 +34,48 @@ class Login extends StatelessWidget {
           child: ListView(children: [
             const LogoAuth(),
             const SizedBox(height: 20),
-              CustmTextTitleAuth(text: "10".tr),
+            CustmTextTitleAuth(text: "10".tr),
             const SizedBox(height: 10),
-              CustomTextBodyAuth(
-                text:
-                    "11".tr),
+            CustomTextBodyAuth(text: "11".tr),
             const SizedBox(height: 15),
             CustomTextFormAuth(
-              isNumber: false,
+              isNumber: false ,
+
+              valid: (val) {
+                return validInput(val!, 5, 100, "email");
+              },
               mycontroller: controller.email,
               hinttext: "12".tr,
               iconData: Icons.email_outlined,
               labeltext: "18".tr,
-              valid: (val) { 
-                return validInupt(val!, 5, 25, "email");
-              },
               // mycontroller: ,
             ),
             CustomTextFormAuth(
-              isNumber: false,
+              isNumber: false ,
+
+              valid: (val) {
+                return validInput(val!, 5, 30, "password");
+              },
               mycontroller: controller.password,
               hinttext: "13".tr,
               iconData: Icons.lock_outline,
               labeltext: "19".tr,
-              valid: (val) { 
-                return validInupt(val!, 5, 10, "password");
-              },
               // mycontroller: ,
             ),
             InkWell(
               onTap: () {
                 controller.goToForgetPassword();
               },
-              child:   Text(
+              child: Text(
                 "14".tr,
                 textAlign: TextAlign.right,
               ),
             ),
-            CustomButtonAuth(text: "15".tr, onPressed: () {
-              controller.login();
-            }),
+            CustomButtonAuth(
+                text: "15".tr,
+                onPressed: () {
+                  controller.login();
+                }),
             const SizedBox(height: 40),
             CustomTextSignUpOrSignIn(
               textone: "16".tr,

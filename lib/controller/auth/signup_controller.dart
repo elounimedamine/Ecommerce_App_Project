@@ -8,7 +8,6 @@ abstract class SignUpController extends GetxController {
 }
 
 class SignUpControllerImp extends SignUpController {
-
   GlobalKey<FormState> formstate = GlobalKey<FormState>();
 
   late TextEditingController username;
@@ -18,29 +17,25 @@ class SignUpControllerImp extends SignUpController {
 
   @override
   signUp() {
-    var formdata = formstate.currentState;
-
-    if(formdata!.validate()){
-      print("Valid");
+    if (formstate.currentState!.validate()) {
       Get.offNamed(AppRoute.VerfiyCodeSignUp);
-    }else{
+      Get.delete<SignUpControllerImp>();
+    } else {
       print("Not Valid");
     }
-
   }
 
   @override
   goToSignIn() {
-    Get.offNamed(AppRoute.login); //الغاء العودة
+    Get.offNamed(AppRoute.login);
   }
 
   @override
   void onInit() {
     username = TextEditingController();
-    email = TextEditingController();
     phone = TextEditingController();
+    email = TextEditingController();
     password = TextEditingController();
-
     super.onInit();
   }
 
@@ -50,7 +45,6 @@ class SignUpControllerImp extends SignUpController {
     email.dispose();
     phone.dispose();
     password.dispose();
-
     super.dispose();
   }
 }
