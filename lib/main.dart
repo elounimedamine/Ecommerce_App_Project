@@ -30,7 +30,8 @@ class MyApp extends StatelessWidget {
       title: 'E-commerce Application',
       locale: controller.language,
       theme: controller.appTheme,
-      home: const Language(),//Test(),//Login(), //Test(), //OnBoarding(), //Language(),
+      home:
+          const Language(), //Test(),//Login(), //Test(), //OnBoarding(), //Language(),,
       initialBinding: MyBinding(),
       routes: routes,
     );
